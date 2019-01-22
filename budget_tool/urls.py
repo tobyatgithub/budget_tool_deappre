@@ -21,7 +21,7 @@ from budgets.views import TransactionDetailView, BudgetListView, BudgetDetailVie
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='/src/budget_tool/templates/generic/base.html')),
+    path('', TemplateView.as_view(template_name='/src/budget_tool/templates/generic/base.html'), name='home'),
     path('budget/', BudgetListView.as_view(), name='budget_list'),
     path('budget_detail/', BudgetDetailView.as_view(), name='budget_detail'),
     path('transaction/<int:id>', TransactionDetailView.as_view(), name='transaction_detail'),
